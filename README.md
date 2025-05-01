@@ -26,19 +26,19 @@ This repository hosts a prebuilt **Apptainer/Singularity container** for [ESMFol
 2. **Download the prebuilt `esmfold.sif` container from Zenodo:**
 
    ```bash
-   wget -O esmfold.sif "https://zenodo.org/records/15194473/files/evo2.sif?download=1"
+   wget -O esmfold.sif "https://zenodo.org/records/15318546/files/esmfold.sif?download=1"
    ```
 
    Or download it manually here:  
-   👉 [Download esmfold.sif (8.4GB)](https://zenodo.org/records/15194473/files/evo2.sif?download=1)
+   👉 [Download esmfold.sif (8.4GB)](https://zenodo.org/records/15318546/files/esmfold.sif?download=1)
 
-3. **Run Evo 2 using the Apptainer container:**
+3. **Run ESMFold using the Apptainer container:**
 
    ```bash
 	apptainer exec --nv esmfold.sif python3 fold.py input.fasta -o output
    ```
 
-   > 🧠 This will use GPU acceleration (`--nv`), bind your local code and model directories, and run inference using the `evo2_7b` model.
+   > 🧠 This will use GPU acceleration (`--nv`)
 
 ---
 
