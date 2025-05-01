@@ -8,7 +8,10 @@ This repository hosts a prebuilt **Apptainer/Singularity container** for [ESMFol
 
 - `sha256sum.txt` – SHA256 checksum for verifying the container  
 - `esmfold.sif` – Downloaded separately (see below)
-
+- `Dockerfile` - Dockerfile to build the esmfold container in docker
+- `fold.py` - python script to fold proteins, using FASTA as input
+- `fold_chunk.py` - idem to fold.py but uses chunking to reduce maximum vram usage
+- `esmdocker.sh` - basic shell script to run esmfold container with fold.py
 ---
 
 ## ✅ Getting Started
@@ -44,10 +47,8 @@ This repository hosts a prebuilt **Apptainer/Singularity container** for [ESMFol
 If you prefer building from source using Docker:
 
 ```bash
-git clone --branch add-dockerfile https://github.com/victornemeth/evo2.git
-cd evo2
-docker build -t evo2 .
-singularity build evo2.sif docker-daemon://evo2:latest
+docker build -t esmfold .
+singularity build esmfold.sif docker-daemon://esmfold:latest
 ```
 
 ---
