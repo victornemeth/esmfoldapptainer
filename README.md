@@ -35,7 +35,7 @@ This repository hosts a prebuilt **Apptainer/Singularity container** for [ESMFol
 3. **Run ESMFold using the Apptainer container:**
 
    ```bash
-apptainer exec --nv esmfold.sif python3 fold.py input.fasta -o output
+   apptainer exec --nv esmfold.sif python3 fold.py input.fasta -o output
    ```
 
    > 🧠 This will use GPU acceleration (`--nv`)
